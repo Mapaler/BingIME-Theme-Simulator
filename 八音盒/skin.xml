@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<skin name="快要坏掉的八音盒" version="1.0" author="枫谷剑仙" email="mapaler@163.com" time="2014.01.01" info="素材来源：Electromagnetic Wave (POP)的画集" xmlns="http://schemas.microsoft.com/ime/skin/1.0">
+  <!--输入栏-->
+  <input-window>
+    <background>
+	<!--horizontal是水平、vertical是竖着，fixed-range-stretch是平铺，tile是拉伸-->
+      <stretchable-image source="spaceindex_note.png" horizontal-stretch-type="tile" horizontal-stretch-param="117,74" vertical-stretch-type="tile" vertical-stretch-param="118,63" />
+    </background>
+	<!--输入框-->
+    <composition-window padding="93,88,36,5">
+      <font id="en" size="14" family="Microsoft Yahei UI Light" color="83,134,255" />
+      <font id="zh" size="14" family="Microsoft Yahei UI Light" color="83,134,255" />
+    </composition-window>
+	<!--候选框-->
+    <candidate-window padding="93,5,8,60">
+      <font id="default" size="14" family="Microsoft Yahei UI Light" color="90,90,90" />
+      <font id="highlight" size="16" family="Microsoft Yahei UI Light" color="5,86,235" />
+    </candidate-window>
+	<!--input-window横排窗口、composition-window输入框、candidate-window候选框-->
+    <button id="pageup" visibility="1">
+      <alignment grid-position="bottom-right" horizontal-alignment="right" vertical-alignment="bottom" margin="0,0,60,32" relative-window="candidate-window" />
+      <state id="active" default="pup1.png" hover="pup2.png" />
+      <state id="inactive" default="pup1.png" />
+    </button>
+    <button id="pagedown" visibility="1">
+      <alignment grid-position="bottom-right" horizontal-alignment="right" vertical-alignment="bottom" margin="0,0,45,32" relative-window="candidate-window" />
+      <state id="active" default="pdown1.png" hover="pdown2.png" />
+      <state id="inactive" default="pnone.png" />
+    </button>
+	<!--必应搜索框-->
+    <button id="bingbtn" visibility="0">
+      <alignment grid-position="right" horizontal-alignment="right" vertical-alignment="top" margin="0,4,6,0" relative-window="input-window" />
+      <state id="active" default="bingbtn.png" hover="bingbtn-hover.png" />
+      <state id="inactive" default="bingbtn.png" hover="bingbtn.png" />
+    </button>
+	<!--自定义按钮-->
+    <button id="custom0" visibility="1">
+      <alignment grid-position="right" horizontal-alignment="left" vertical-alignment="top" margin="0,0,0,0" relative-window="input-window" />
+      <state id="active" default="left.png" />
+      <state id="inactive" />
+    </button>
+  </input-window>
+  <rich-window />
+  <!--状态栏-->
+  <status-window>
+    <background>
+      <stretchable-image source="status.png" />
+    </background>
+	<!--中英切换-->
+    <toggle-button id="zh-en" visibility="1" position="75,0">
+      <state id="zh" default="blz1.png" hover="blz2.png" down="blz3.png" />
+      <state id="en" default="ble1.png" hover="ble2.png" down="ble3.png" />
+      <state id="cap" default="blc1.png" hover="blc2.png" down="blc3.png" />
+    </toggle-button>
+	<!--全角半角-->
+    <toggle-button id="half-full" visibility="1" position="195,5">
+      <state id="half-shape" default="bah1.png" hover="bah2.png" down="bah3.png" />
+      <state id="full-shape" default="baf1.png" hover="baf2.png" down="baf3.png" />
+    </toggle-button>
+	<!--标点-->
+    <toggle-button id="punctuation" visibility="1" position="120,13">
+      <state id="zh" default="bbz1.png" hover="bbz2.png" down="bbz3.png" />
+      <state id="en" default="bbe1.png" hover="bbe2.png" down="bbe3.png" />
+    </toggle-button>
+	<!--设置菜单-->
+    <toggle-button id="menu" visibility="1" position="270,30">
+      <state id="0" default="bm1.png" hover="bm2.png" down="bm3.png" />
+    </toggle-button>
+	<!--发送反馈-->
+    <toggle-button id="feedback" visibility="0" position="159,0">
+      <state id="0" default="cb_0.png" hover="cb_1.png" leave="cb_2.png" />
+    </toggle-button>
+	<!--双拼，已不可使用-->
+    <toggle-button id="double-full" position="126,1">
+      <state id="0" />
+      <state id="1" />
+    </toggle-button>
+	<!--简繁，已不可使用-->
+    <toggle-button id="chs-cht" position="102,1">
+      <state id="0" />
+      <state id="1" />
+    </toggle-button>
+	<!--软键盘，已不可使用-->
+    <toggle-button id="soft-keyboard" position="83,1">
+      <state id="0" />
+    </toggle-button>
+  </status-window>
+</skin>

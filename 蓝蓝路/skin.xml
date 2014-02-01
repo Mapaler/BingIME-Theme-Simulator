@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<skin name="蓝蓝路" version="1.1" author="枫谷剑仙" email="mapaler@163.com" time="2013.12.29" info="最终道化师洗脑物语，教祖视频素材来源nico，食物矢量图来源网络，输入栏框架来源钢琴小工具。" xmlns="http://schemas.microsoft.com/ime/skin/1.0">
+	<!--输入栏-->
+	<input-window>
+		<background>
+			<!--horizontal是水平，vertical是垂直，fixed-range-stretch是拉伸，tile是平铺-->
+			<stretchable-image source="flyout.png" horizontal-stretch-type="fixed-range-stretch" horizontal-stretch-param="20,25" vertical-stretch-type="tile" vertical-stretch-param="99,19" />
+		</background>
+		<!--输入框，size只有zh起作用，en的family只管输入框，zh的还包括候选框-->
+		<composition-window padding="10,70,30,15">
+			<font id="en" family="Microsoft Yahei UI Light" color="255,30,30" />
+			<font id="zh" size="14" family="Microsoft Yahei UI Light" color="255,30,30" />
+		</composition-window>
+		<!--候选框-->
+		<candidate-window padding="25,4,8,23">
+			<font id="default" color="90,90,90" />
+			<font id="highlight" color="255,0,0" />
+		</candidate-window>
+		<!--
+			relative-window可取input-window横排窗口、composition-window输入框、candidate-window候选框
+			horizontal-alignment可以取left、right、center，vertical-alignment可取top、bottom、middle
+			grid-position除了right不一样，其他都一样？
+			state里的事件有default默认、enter进入、hover悬停、down按下、leave离开五个
+		-->
+		<button id="pageup" visibility="1">
+			<alignment grid-position="bottom-right" horizontal-alignment="right" vertical-alignment="top" relative-window="candidate-window" margin="0,10,85,0"/>
+			<state id="active" default="Pageup1.png" hover="Pageup2.png" />
+			<state id="inactive" default="Pageup1.png" />
+		</button>
+		<button id="pagedown" visibility="1">
+			<alignment grid-position="bottom-right" horizontal-alignment="right" vertical-alignment="top" relative-window="candidate-window" margin="0,10,75,0"/>
+			<state id="active" default="Pagedown1.png" hover="Pagedown2.png" />
+			<state id="inactive" default="Pagedown1.png" />
+		</button>
+		<!--必应搜索框-->
+		<button id="bingbtn" visibility="0">
+			<alignment grid-position="right" horizontal-alignment="right" vertical-alignment="top" margin="0,4,6,0" relative-window="input-window" />
+			<state id="active" default="bingbtn.png" hover="bingbtn-hover.png" />
+			<state id="inactive" default="bingbtn.png" hover="bingbtn.png" />
+		</button>
+		<!--自定义按钮，可多个，id需不一样-->
+		<button id="custom0" visibility="1">
+			<alignment grid-position="right" horizontal-alignment="right" vertical-alignment="top" margin="0,0,0,0" relative-window="input-window" />
+			<state id="active" default="dance.png" />
+			<state id="inactive" />
+		</button>
+	</input-window>
+	<rich-window />
+	<!--状态栏-->
+	<status-window>
+		<background>
+			<stretchable-image source="status.png" />
+		</background>
+		<!--中英切换-->
+		<toggle-button id="zh-en" visibility="1" position="0,115">
+			<state id="zh" default="zh1.png" hover="zh2.png" down="zh3.png" />
+			<state id="en" default="eng1.png" hover="eng2.png" down="eng3.png" />
+			<state id="cap" default="cap1.png" hover="cap2.png" down="cap3.png" />
+		</toggle-button>
+		<!--全角半角-->
+		<toggle-button id="half-full" visibility="1" position="54,100">
+			<state id="half-shape" default="bj1.png" hover="bj2.png" down="bj3.png" />
+			<state id="full-shape" default="qj1.png" hover="qj2.png" down="qj3.png" />
+		</toggle-button>
+		<!--标点-->
+		<toggle-button id="punctuation" visibility="1" position="98,100">
+			<state id="zh" default="zb1.png" hover="zb2.png" down="zb3.png" />
+			<state id="en" default="yb1.png" hover="yb2.png" down="yb3.png" />
+		</toggle-button>
+		<!--设置菜单-->
+		<toggle-button id="menu" visibility="1" position="132,100">
+			<state id="0" default="sz1.png" hover="sz2.png" down="sz3.png" />
+		</toggle-button>
+		<!--发送反馈-->
+		<toggle-button id="feedback" visibility="1" position="159,0">
+			<state id="0" default="cb_0.png" hover="cb_1.png" leave="cb_2.png" />
+		</toggle-button>
+	</status-window>
+</skin>

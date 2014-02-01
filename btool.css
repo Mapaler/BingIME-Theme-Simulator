@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+#basiccfg,#stage{
+	float:left;
+}
+#stage div{
+	/*border:#000 1px solid;*/
+}
+.window{
+	position:relative;
+	overflow:hidden;
+}
+.window > div{
+	position: absolute;
+}

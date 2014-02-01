@@ -1,0 +1,110 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>必应拼音输入法皮肤模拟器 by 枫谷剑仙</title>
+<script type="text/javascript" src="loadxmldoc.js"></script>
+<script type="text/javascript" src="btool.js"></script>
+<!--<link href="btool.css" rel="stylesheet" type="text/css">-->
+</head>
+
+<body>
+<style type="text/css">
+/*设置部分内容*/
+#basiccfg,#stage{
+	float:left;
+}
+#stage{
+	margin-left:20px;
+}
+#basiccfg{
+	padding:3px;
+	background-color:#FFFFFF;
+	border:solid 1px #A1A1A1;
+}
+.backgroundcfg{
+	float:left;
+	border:solid 1px #A1A1A1;
+	margin:3px;
+}
+.colorlist{
+	margin:4px;
+}
+.acolor{
+	width:20px;
+	height:10px;
+	border:solid 1px #000000;
+}
+.abimg{
+	width:40px;
+	height:20px;
+	border:solid 1px #000000;
+}
+/*输入法预览内容*/
+.window{
+	position:relative;
+	overflow:hidden;
+	margin:10px auto;
+	border:solid 1px #A1A1A1;
+}
+.window > div{
+	position: absolute;
+}
+#input-horizontal .candidateword{
+	margin-left:8px;
+}
+.candidate .candidateword:first-child{
+	margin-left:0px;
+}
+.composition,#input-horizontal .candidate,.candidateword{
+	position:static;
+	white-space:nowrap;
+}
+</style>
+<style type="text/css" id="customcss">
+</style>
+<div id="basiccfg">
+<span style="font-size:12px;color:#999;">请使用火狐浏览器运行本程序。<br/>第一次运行会看不到输入栏上的按钮，请再点一下获取</span>
+<br />
+<label>文件夹路径<input name="path" type="text" id="path" value="东东娘" /></label><input name="load" type="button" id="load" onClick="load(document.getElementById('path').value);" value="获取皮肤" />
+<br />
+<label>输入内容<input name="composition_text" type="text" id="composition_text" value="必应shu'ru'fa" /></label>
+<br />
+<label>候选内容<textarea name="candidate_text" id="candidate_text">输入法
+输入
+书
+树
+数</textarea></label>
+    <div id="bgcfg">
+        <div class="backgroundcfg">
+            <div class="info">背景颜色</div>
+            <div class="colorlist">
+                <div class="acolor" style="background-color:#FFFFFF;" onclick="cbg('#FFFFFF');"></div>
+                <div class="acolor" style="background-color:#000000;" onclick="cbg('#000000');"></div>
+                <div class="acolor" style="background-color:#FF0000;" onclick="cbg('#FF0000');"></div>
+                <div class="acolor" style="background-color:#00FF00;" onclick="cbg('#00FF00');"></div>
+                <div class="acolor" style="background-color:#0000FF;" onclick="cbg('#0000FF');"></div>
+                <div class="acolor" style="background-color:#FF00FF;" onclick="cbg('#FF00FF');"></div>
+                <div class="acolor" style="background-color:#FFFF00;" onclick="cbg('#FFFF00');"></div>
+                <div class="acolor" style="background-color:#00FFFF;" onclick="cbg('#00FFFF');"></div>
+            </div>
+        </div>
+        <div class="backgroundcfg">
+            <div class="info">背景图片</div>
+            <div class="colorlist">
+                <div class="abimg" style="background-image:url(images/CN-wp1.jpg);background-size:40px 20px;" onclick="cbg('url(images/CN-wp1.jpg)');"></div>
+                <div class="abimg" style="background-image:url(images/CN-wp2.jpg);background-size:40px 20px;" onclick="cbg('url(images/CN-wp2.jpg)');"></div>
+                <div class="abimg" style="background-image:url(images/CN-wp3.jpg);background-size:40px 20px;" onclick="cbg('url(images/CN-wp3.jpg)');"></div>
+                <div class="abimg" style="background-image:url(images/CN-wp4.jpg);background-size:40px 20px;" onclick="cbg('url(images/CN-wp4.jpg)');"></div>
+                <div class="abimg" style="background-image:url(images/CN-wp5.jpg);background-size:40px 20px;" onclick="cbg('url(images/CN-wp5.jpg)');"></div>
+                <div class="abimg" style="background-image:url(images/CN-wp6.jpg);background-size:40px 20px;" onclick="cbg('url(images/CN-wp6.jpg)');"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="stage">
+</div>
+<script type="text/javascript">
+</script>
+</body>
+</html>

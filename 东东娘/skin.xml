@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<skin name="东东娘" version="1.1" author="枫谷剑仙" email="mapaler@163.com" time="2014.01.02" info="人物全是我自己画的，所以这个我是完全拥有著作权的哦。" xmlns="http://schemas.microsoft.com/ime/skin/1.0">
+  <!--输入栏-->
+  <input-window>
+    <background>
+	<!--horizontal是水平、vertical是竖着，fixed-range-stretch是平铺，tile是拉伸-->
+      <stretchable-image source="inputbox.png" horizontal-stretch-type="tile" horizontal-stretch-param="168,55" vertical-stretch-type="tile" vertical-stretch-param="191,35" />
+    </background>
+	<!--输入框-->
+    <composition-window padding="38,21,36,5">
+      <font id="en" size="14" family="Microsoft Yahei UI Light" color="128,18,158" />
+      <font id="zh" size="14" family="Microsoft Yahei UI Light" color="128,18,158" />
+    </composition-window>
+	<!--候选框-->
+    <candidate-window padding="166,5,8,21">
+      <font id="default" size="14" family="Microsoft Yahei UI Light" color="187,65,201" />
+      <font id="highlight" size="16" family="Microsoft Yahei UI Light" color="255,90,11" />
+    </candidate-window>
+	<!--input-window横排窗口、composition-window输入框、candidate-window候选框-->
+    <button id="pageup" visibility="1">
+      <alignment grid-position="top-right" horizontal-alignment="right" vertical-alignment="top" margin="0,5,32,0" relative-window="candidate-window" />
+      <state id="active" default="pup1.png" hover="pup2.png" down="pup3.png" />
+      <state id="inactive" default="pup4.png" />
+    </button>
+    <button id="pagedown" visibility="1">
+      <alignment grid-position="top-right" horizontal-alignment="right" vertical-alignment="top" margin="0,55,32,0" relative-window="candidate-window" />
+      <state id="active" default="pdown1.png" hover="pdown2.png" down="pdown3.png" />
+      <state id="inactive" default="pdown4.png" />
+    </button>
+	<!--必应搜索框-->
+    <button id="bingbtn" visibility="1">
+      <alignment grid-position="right" horizontal-alignment="right" vertical-alignment="top" margin="0,13,32,0" relative-window="input-window" />
+      <state id="active" default="search1.png" hover="search2.png" down="search3.png" />
+      <state id="inactive" default="search4.png" />
+    </button>
+	<!--自定义按钮-->
+    <button id="custom0" visibility="1">
+      <alignment grid-position="left" horizontal-alignment="left" vertical-alignment="top" margin="13,64,0,0" relative-window="input-window" />
+      <state id="active" default="dance.png" />
+      <state id="inactive" />
+    </button>
+  </input-window>
+  <rich-window />
+  <!--状态栏-->
+  <status-window>
+    <background>
+      <stretchable-image source="status.png" />
+    </background>
+	<!--中英切换-->
+    <toggle-button id="zh-en" visibility="1" position="145,100">
+      <state id="zh" default="blz1.png" enter="blz2.png" hover="blz3.png" down="blz4.png" leave="blz5.png" />
+      <state id="en" default="ble1.png" enter="ble2.png" hover="ble3.png" down="ble4.png" leave="ble5.png" />
+      <state id="cap" default="blc1.png" enter="blc2.png" hover="blc3.png" down="blc4.png" leave="blc5.png" />
+    </toggle-button>
+	<!--全角半角-->
+    <toggle-button id="half-full" visibility="1" position="205,100">
+      <state id="half-shape" default="bsh1.png" enter="bsh2.png" hover="bsh3.png" down="bsh4.png" leave="bsh5.png" />
+      <state id="full-shape" default="bsf1.png" enter="bsf2.png" hover="bsf3.png" down="bsf4.png" leave="bsf5.png" />
+    </toggle-button>
+	<!--标点-->
+    <toggle-button id="punctuation" visibility="1" position="265,100">
+      <state id="zh" default="bbz1.png" enter="bbz2.png" hover="bbz3.png" down="bbz4.png" leave="bbz5.png" />
+      <state id="en" default="bbe1.png" enter="bbe2.png" hover="bbe3.png" down="bbe4.png" leave="bbe5.png" />
+    </toggle-button>
+	<!--设置菜单-->
+    <toggle-button id="menu" visibility="1" position="325,100">
+      <state id="0" default="bm1.png" enter="bm2.png" hover="bm3.png" down="bm4.png" leave="bm5.png" />
+    </toggle-button>
+	<!--发送反馈-->
+    <toggle-button id="feedback" visibility="0" position="159,0">
+      <state id="0" default="cb_0.png" hover="cb_1.png" leave="cb_2.png" />
+    </toggle-button>
+	<!--双拼，已不可使用-->
+    <toggle-button id="double-full" position="126,1">
+      <state id="0" />
+      <state id="1" />
+    </toggle-button>
+	<!--简繁，已不可使用-->
+    <toggle-button id="chs-cht" position="102,1">
+      <state id="0" />
+      <state id="1" />
+    </toggle-button>
+	<!--软键盘，已不可使用-->
+    <toggle-button id="soft-keyboard" position="83,1">
+      <state id="0" />
+    </toggle-button>
+  </status-window>
+</skin>

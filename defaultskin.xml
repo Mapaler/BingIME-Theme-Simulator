@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<skin name="" version="" author="" email="" time="" info="" xmlns="">
+	<input-window>
+		<background>
+			<stretchable-image source="" horizontal-stretch-type="" horizontal-stretch-param="" vertical-stretch-type="" vertical-stretch-param="" />
+		</background>
+		<composition-window padding="">
+			<font id="" size="" family="" color="" />
+			<font id="" size="" family="" color="" />
+		</composition-window>
+		<candidate-window padding="">
+			<font id="" size="" family="" color="" />
+			<font id="" size="" family="" color="" />
+		</candidate-window>
+		<button id="pageup" visibility="0">
+			<alignment grid-position="" horizontal-alignment="" vertical-alignment="" relative-window="" margin=""/>
+			<state id="active"  />
+			<state id="inactive"  />
+		</button>
+		<button id="pagedown" visibility="0">
+			<alignment grid-position="" horizontal-alignment="" vertical-alignment="" relative-window="" margin=""/>
+			<state id="active" />
+			<state id="inactive"  />
+		</button>
+		<button id="bingbtn" visibility="0">
+			<alignment grid-position="" horizontal-alignment="" vertical-alignment="" margin="" relative-window="" />
+			<state id="active" />
+			<state id="inactive" />
+		</button>
+	</input-window>
+	<rich-window />
+	<status-window>
+		<background>
+			<stretchable-image source="" />
+		</background>
+		<toggle-button id="zh-en" visibility="0" position="">
+			<state id="zh"  />
+			<state id="en"  />
+			<state id="cap"  />
+		</toggle-button>
+		<toggle-button id="half-full" visibility="0" position="">
+			<state id="half-shape"  />
+			<state id="full-shape"  />
+		</toggle-button>
+		<toggle-button id="punctuation" visibility="0" position="">
+			<state id="zh" />
+			<state id="en" />
+		</toggle-button>
+		<toggle-button id="menu" visibility="0" position="">
+			<state id="0" />
+		</toggle-button>
+		<toggle-button id="feedback" visibility="0" position="">
+			<state id="0" />
+		</toggle-button>
+	</status-window>
+</skin>
